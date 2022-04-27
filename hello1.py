@@ -1,17 +1,15 @@
 """
-Поддержка чисел с плавающей запятой: стр. 361.
+Операторы присваевания: стр. 363.
 """
 
 while True:
-    reply = input('Enter text:')
+    reply = input('Entet text: ')
     if reply == 'stop':
         break
-    elif not reply.isdigit():
-        print('Bad!' * 80)
-    else:
-        num = int(reply)
-        if num < 20:
-            print('low!')
-        else:
-            print(num ** 2)
-print('Bye!!!')
+    try:
+        print(float(reply) ** 2)
+    except:
+        print("Bad!" * 8)
+print('Bye!')
+
+
