@@ -1,5 +1,5 @@
 """
-ГЛАВА 13: Тасование последовательностей:range и len: стр. 428.
+ГЛАВА 13: стр. 436
 """
 """
 while True:
@@ -57,8 +57,10 @@ for key in tests:
         print(key, "not found!")
 """
 
-seq1="spam"
-seq2 = "scam"
-res = [x for x in seq1 if x in seq2]
-print(res)
+dict3 = {}
 
+keys = ['spam', 'eggs', 'toast', 'pizza']
+vals = [1,2,3,4]
+
+dict3 = dict(zip(keys, vals))
+print(dict3)
