@@ -1,5 +1,5 @@
 """
-ГЛАВА 16: Написание кода функций. стр 495.
+ГЛАВА 16: Страница 513.
 """
 """
 while True:
@@ -59,23 +59,20 @@ for key in tests:
 
 
 """def reverse_words(text):
-    List = []
-    List.append(text.split())
-    #reverse_text = List[0][::-1]
-    #return print(reverse_text)
-    reverse_text = [i for i in List[0][::-1]]
-    return print(reverse_text)
-reverse_words('Привет меня зовут Иван!')"""
-
-def reverse_words(text):
     res=''
     for i in range(len(text)-1,-1,-1):
         res+=text[i]
     List=[]
     List.append(res.split(" "))
-    
+
     res = List[0][::-1]
     return res
 #Продолжить завтра
 n = reverse_words("Привет меня зовут иван!")
-print(n)
+print(n)"""
+
+def func1(a): 
+    return f"Это первая функция с переменной {a}!"
+
+
+print(func1(2))
