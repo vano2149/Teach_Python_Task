@@ -1,5 +1,5 @@
 """
-ГЛАВА 14: Напротив, в Python З.Х встроенные функции zip,  стр. 462
+ГЛАВА 16: Написание кода функций. стр 495.
 """
 """
 while True:
@@ -57,10 +57,25 @@ for key in tests:
         print(key, "not found!")
 """
 
-dict3 = {}
 
-keys = ['spam', 'eggs', 'toast', 'pizza']
-vals = [1,2,3,4]
+"""def reverse_words(text):
+    List = []
+    List.append(text.split())
+    #reverse_text = List[0][::-1]
+    #return print(reverse_text)
+    reverse_text = [i for i in List[0][::-1]]
+    return print(reverse_text)
+reverse_words('Привет меня зовут Иван!')"""
 
-dict3 = dict(zip(keys, vals))
-print(dict3)
+def reverse_words(text):
+    res=''
+    for i in range(len(text)-1,-1,-1):
+        res+=text[i]
+    List=[]
+    List.append(res.split(" "))
+    
+    res = List[0][::-1]
+    return res
+#Продолжить завтра
+n = reverse_words("Привет меня зовут иван!")
+print(n)
