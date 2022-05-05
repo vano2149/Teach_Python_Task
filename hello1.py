@@ -1,5 +1,5 @@
 """
-ГЛАВА 16: Страница 513.
+ГЛАВА 16: Страница 528 Операрор nonlocal.
 """
 """
 while True:
@@ -71,8 +71,25 @@ for key in tests:
 n = reverse_words("Привет меня зовут иван!")
 print(n)"""
 
-def func1(a): 
-    return f"Это первая функция с переменной {a}!"
 
 
-print(func1(2))
+"""
+def is_prime(num):
+    if num <= 0 or num == 1:
+        return False
+    elif num % num == 0 and num !=0:
+        return True
+    else:
+        return False
+"""
+X = 99
+
+def f1():
+    X = 88
+
+    def f2():
+        return(X)
+    return f2
+
+action = f1()
+print(action())
