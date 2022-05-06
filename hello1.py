@@ -1,5 +1,5 @@
 """
-ГЛАВА 16: Страница 528 Операрор nonlocal.
+ГЛАВА 18: Аргументы и разделяемые ссылки стр.543
 """
 """
 while True:
@@ -82,14 +82,16 @@ def is_prime(num):
     else:
         return False
 """
-X = 99
 
-def f1():
-    X = 88
+import builtins
 
-    def f2():
-        return(X)
-    return f2
+class MakeOpen:
+    def __init__(self, id):
+        self.id = id
+        self.original = builtins.open
+        builtins.open = self
 
-action = f1()
-print(action())
+    def __call__(self, *pargs, **kargs):
+        print(f'Custom open call {self.id}', pargs, kargs)
+        return self.original(*pargs, **kargs)
+
