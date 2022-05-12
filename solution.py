@@ -17,6 +17,8 @@ def solution(s):
             st += c
 
     return st
+
+
 from collections import Counter
 
 def count(string):
@@ -26,3 +28,16 @@ def count(string):
 a="pflfhfdf"
 
 count(a)
+
+f = ['2', "4", "3"]
+
+g = []
+
+def find_outlier(integers):
+    for i in f:
+        i = int()
+        if i % 2 == 0:
+            g.append(i)
+    return print(g)
+
+find_outlier(f)
