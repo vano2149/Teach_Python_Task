@@ -1,4 +1,5 @@
 """
+Страница 599. Глава 20 Включения и генераторы.
 """
 
 def two_oldest_ages(ages):
@@ -11,7 +12,7 @@ def two_oldest_ages(ages):
     l.reverse()
     return l
 
-    
+
 
 a = [1, 5, 87, 45, 8, 8]
 
